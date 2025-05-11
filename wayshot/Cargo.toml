@@ -18,7 +18,7 @@ eyre = "0.6.12"
 [dependencies]
 tracing.workspace = true
 
-libwayshot.workspace = true
+libwayshot-xcap.workspace = true
 
 clap = { version = "4.5.37", features = ["derive"] }
 tracing-subscriber = "0.3.19"

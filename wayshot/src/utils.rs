@@ -10,16 +10,16 @@ use std::{
 };
 
 use chrono::Local;
-use libwayshot::Result;
-use libwayshot::region::{LogicalRegion, Position, Region, Size};
+use libwayshot_xcap::Result;
+use libwayshot_xcap::region::{LogicalRegion, Position, Region, Size};
 
 pub fn waysip_to_region(size: libwaysip::Size, point: libwaysip::Point) -> Result<LogicalRegion> {
     let size: Size = Size {
         width: size.width.try_into().map_err(|_| {
-            libwayshot::Error::FreezeCallbackError("width cannot be negative".to_string())
+            libwayshot_xcap::Error::FreezeCallbackError("width cannot be negative".to_string())
         })?,
         height: size.height.try_into().map_err(|_| {
-            libwayshot::Error::FreezeCallbackError("height cannot be negative".to_string())
+            libwayshot_xcap::Error::FreezeCallbackError("height cannot be negative".to_string())
         })?,
     };
     let position: Position = Position {

@@ -1,7 +1,7 @@
 use crate::error::{Result, WaylandEGLStateError};
 use crate::utils::load_shader;
 
-use libwayshot::WayshotConnection;
+use libwayshot_xcap::WayshotConnection;
 
 use gl::types::GLuint;
 use khronos_egl::{self as egl};
